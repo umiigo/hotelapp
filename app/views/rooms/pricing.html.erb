@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-3">
+        <%= render 'room_menu' %> 
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Pricing
+            </div>
+
+            <div class="panel-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6"/>
+                            <%= form_for @room do |f| %>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label>Listing Price</label>
+                                        <%= f.text_field :price, placeholder: 'Enter Price Here eg.', class:'form-control'%>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                        <%= f.submit "Save", class: 'btn btn-normal' %>
+                                </div>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
