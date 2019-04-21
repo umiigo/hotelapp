@@ -72,6 +72,19 @@ Rails.application.configure do
     user_name: ENV['mailgun_address'],
     password: ENV['mailgun_password'], 
   }
+
+  config.paperclip_defaults = {
+    storage: :s3,
+    path: ':class/:attachment/:id/:style/:filename',
+    s3_host_name: 's3.amazonaws.com',
+    s3_credentials: {
+      bucket: 'umrahscom',
+      access_key_id: 'AKIAJUB5AXIJX6TX3RQQ',
+      secret_access_key: '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',
+      s3_region: 'us-east-1'
+    }
+
+  }
 end
 
 

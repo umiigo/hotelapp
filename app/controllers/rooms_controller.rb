@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
   before_action :set_room, except: [:index, :new, :create]
   before_action :authenticate_user!, except: [:show]
+  before_action :is_authorised, only: [:listing, :pricing, :description, :photo_upload, :amenities, :location, :update]
 
   def index
     @rooms = current_user.rooms
@@ -33,6 +34,7 @@ class RoomsController < ApplicationController
   end
 
   def photo_upload
+    @photos = @room.photos
   end
 
   def amenities
@@ -42,7 +44,9 @@ class RoomsController < ApplicationController
   end
 
   def update
-    if @room.update(room_params)
+    new_params = room_params
+    new_params = room_params.merge(active: true) if is_ready_room
+    if @room.update(new_params)
       flash[:notice] = 'Saved...'
     else
       flash[:notice] = 'Something Went Wrong...'
@@ -53,6 +57,14 @@ class RoomsController < ApplicationController
   private 
     def set_room
       @room = Room.find(params[:id])
+    end
+
+    def is_authorised
+      redirect_to root_path, alert: "You don't have permission" unless current_user.id == @room.user_id
+    end
+
+    def is_ready_room
+      !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank?
     end
 
     def room_params
