@@ -64,6 +64,7 @@ gem 'omniauth-facebook', '~> 4.0'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 gem 'paperclip', '~> 5.2.0'
 gem 'aws-sdk', '~> 2.8'
 
@@ -71,5 +72,8 @@ gem 'aws-sdk', '~> 2.8'
 >>>>>>> 4205e2e... added facebook auth gems
 =======
 gem 'paperclip', '~> 5.1.0'
+=======
+gem 'paperclip', '~> 5.2.0'
+>>>>>>> 59e453c... updated paperclip to 5.2.0 to remove security flaw
 
 >>>>>>> 087a17a... added paperclip
