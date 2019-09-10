@@ -13,6 +13,9 @@
                     <div class="row">
                         <div class="col-md-offset-3 col-md-6"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1a8b03e... Added s3 Storage
                             <%= form_for @room, url: room_photos_path(@room), method:'post', html: {multipart:true} do |f| %>
                                 <div class-"row">
                                   <div class="form-group">
@@ -27,6 +30,7 @@
                                     <%= f.submit "Add Photos", class:"btn btn-form" %>
                                 </div>
                             <% end %>
+<<<<<<< HEAD
                         </div>
                     </div>
                     
@@ -40,6 +44,16 @@
                         </div>
                     </div>
 >>>>>>> 087a17a... added paperclip
+=======
+                        </div>
+                    </div>
+                    
+                    <div id="photos">
+                      <%= render 'photos/photos_list' %>
+                    </div>
+
+
+>>>>>>> 1a8b03e... Added s3 Storage
                 </div>
             </div>
 

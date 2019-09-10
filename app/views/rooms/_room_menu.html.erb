@@ -1,5 +1,8 @@
 <ul class="sidebar-list">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1a8b03e... Added s3 Storage
   <li class="sidebar-item">
     <%= link_to "Listing", listing_room_path, class: "sidebar-link active" %>
     <span class="pull-right text-babu"><i class="fa fa-check"></i></span>
@@ -34,6 +37,7 @@
   </li>
 </ul>
 <hr/>
+<<<<<<< HEAD
 
 <% is_ready = !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? %>
 
@@ -45,11 +49,12 @@
     <li class="sidebar-item">
         <%= link_to "Listing", listing_room_path, class:'sidebar-link active' %>
     </li>
+=======
+>>>>>>> 1a8b03e... Added s3 Storage
 
-    <li class="sidebar-item">
-        <%= link_to "Pricing", pricing_room_path, class:'sidebar-link active' %>
-    </li>
+<% is_ready = !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? %>
 
+<<<<<<< HEAD
     <li class="sidebar-item">
         <%= link_to "Description", description_room_path, class:'sidebar-link active' %>
     </li>
@@ -68,3 +73,9 @@
 
 </ul>
 >>>>>>> 087a17a... added paperclip
+=======
+<%= form_for @room do |f| %>
+  <%= f.hidden_field :active, value: true %>
+  <%= f.submit "Publish", id: "publish_button", class: "btn btn-normal btn-block", disabled: !is_ready %>
+<% end %>
+>>>>>>> 1a8b03e... Added s3 Storage
