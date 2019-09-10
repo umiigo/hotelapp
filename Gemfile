@@ -63,8 +63,13 @@ gem 'omniauth', '~> 1.6'
 gem 'omniauth-facebook', '~> 4.0'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 gem 'paperclip', '~> 5.2.0'
 gem 'aws-sdk', '~> 2.8'
 
 =======
 >>>>>>> 4205e2e... added facebook auth gems
+=======
+gem 'paperclip', '~> 5.1.0'
+
+>>>>>>> 087a17a... added paperclip

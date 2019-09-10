@@ -7,6 +7,7 @@ class Room < ApplicationRecord
   validates :accommodate, presence: true
   validates :bed_room, presence: true
   validates :bath_room, presence: true
+<<<<<<< HEAD
 
   def cover_photo(size)
     if self.photos.length > 0
@@ -16,5 +17,7 @@ class Room < ApplicationRecord
     end 
   end
 
+=======
+>>>>>>> 087a17a... added paperclip
 end
 

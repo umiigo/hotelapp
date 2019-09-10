@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   root 'pages#home'
+=======
+>>>>>>> 087a17a... added paperclip
   devise_for :users,
               path:'',
               path_names: {sign_in: 'login', sign_out:'logout', edit: 'profile', sign_up:'registration'},
@@ -16,6 +19,10 @@ Rails.application.routes.draw do
         get 'amenities'
         get 'location'
       end
+<<<<<<< HEAD
       resources :photos, only:[:create, :destroy]
+=======
+      resources :photos, only: [:create, :destroy]
+>>>>>>> 087a17a... added paperclip
     end
 end

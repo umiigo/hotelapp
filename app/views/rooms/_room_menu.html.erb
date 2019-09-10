@@ -1,4 +1,5 @@
 <ul class="sidebar-list">
+<<<<<<< HEAD
   <li class="sidebar-item">
     <%= link_to "Listing", listing_room_path, class: "sidebar-link active" %>
     <span class="pull-right text-babu"><i class="fa fa-check"></i></span>
@@ -40,3 +41,30 @@
   <%= f.hidden_field :active, value: true %>
   <%= f.submit "Publish", id: "publish_button", class: "btn btn-normal btn-block", disabled: !is_ready %>
 <% end %>
+=======
+    <li class="sidebar-item">
+        <%= link_to "Listing", listing_room_path, class:'sidebar-link active' %>
+    </li>
+
+    <li class="sidebar-item">
+        <%= link_to "Pricing", pricing_room_path, class:'sidebar-link active' %>
+    </li>
+
+    <li class="sidebar-item">
+        <%= link_to "Description", description_room_path, class:'sidebar-link active' %>
+    </li>
+
+    <li class="sidebar-item">
+        <%= link_to "Photos", photo_upload_room_path, class:'sidebar-link active' %>
+    </li>
+
+    <li class="sidebar-item">
+        <%= link_to "Amenities", amenities_room_path, class:'sidebar-link active' %>
+    </li>
+
+    <li class="sidebar-item">
+        <%= link_to "Location", location_room_path, class:'sidebar-link active' %>
+    </li>
+
+</ul>
+>>>>>>> 087a17a... added paperclip
