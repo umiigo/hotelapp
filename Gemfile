@@ -62,6 +62,9 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'omniauth', '~> 1.6'
 gem 'omniauth-facebook', '~> 4.0'
 
+<<<<<<< HEAD
 gem 'paperclip', '~> 5.2.0'
 gem 'aws-sdk', '~> 2.8'
 
+=======
+>>>>>>> 4205e2e... added facebook auth gems
